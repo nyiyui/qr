@@ -1,0 +1,19 @@
+{{define "show"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Printable</title>
+        <style>
+            #qr {
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Printable QR code for <pre>{{printf "%s" .src}}</pre></p>
+        <img id="qr" src="{{.url}}" />
+    </body>
+</html>
+{{end}}
